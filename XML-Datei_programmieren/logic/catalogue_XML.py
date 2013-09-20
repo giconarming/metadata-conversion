@@ -5,38 +5,56 @@ f = open('../input/ATS_TOA_1PRBCM20030102_113342_000000482012_00337_04399_0003.N
 for i in range(16):
       line = f.readline()
 
-
       a = 'PRODUCT='
       if line.startswith(a):
-          print(line)
+          startIndex = line.index('\"')+1
+          endIndex = len(line)-2
+          print(line[startIndex:endIndex])
+
 
       b = 'ACQUISITION_STATION='
       if line.startswith(b):
-          print(line)
+          startIndex = line.index('\"')+1
+          endIndex = len(line)-2
+          print(line[startIndex:endIndex])
 
       c = 'PROC_CENTER='
       if line.startswith(c):
-          print(line)
+          startIndex = line.index('\"')+1
+          endIndex = len(line)-2
+          print(line[startIndex:endIndex])
 
       d = 'PROC_TIME='
       if line.startswith(d):
-          print(line)
+          startIndex = line.index('\"')+1
+          endIndex = len(line)-2
+          print(line[startIndex:endIndex])
 
       e = 'SOFTWARE_VER='
       if line.startswith(e):
-          print(line)
+          startIndex = line.index('\"')+1
+          endIndex = len(line)-2
+          print(line[startIndex:endIndex])
 
       j = 'SENSING_START='
       if line.startswith(j):
-          print(line)
+          startIndex = line.index('\"')+1
+          endIndex = len(line)-2
+          print(line[startIndex:endIndex])
 
       g = 'SENSING_STOP='
       if line.startswith(g):
-          print(line)
+          startIndex = line.index('\"')+1
+          endIndex = len(line)-2
+          print(line[startIndex:endIndex])
 
       h = 'ABS_ORBIT='
       if line.startswith(h):
-          print(line)
+          startIndex = line.index('=')+1
+          endIndex = len(line)-1
+          print(line[startIndex:endIndex])
+
+
 
 
 
