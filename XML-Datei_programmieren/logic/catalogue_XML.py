@@ -12,7 +12,6 @@ for i in range(16):
 
 
 
-
       a = 'PRODUCT='
       if line.startswith(a):
           write('     ')
