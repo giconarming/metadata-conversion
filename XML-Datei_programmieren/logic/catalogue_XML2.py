@@ -8,8 +8,6 @@ output = sys.stdout
 #f = open(sys.argv[1], 'r')
 #output = open('../output/catalogue.xml', 'w')
 write = output.write
-write('<catalog_entry>')
-write('\n')
 
 for i in range(80):
     line = input.readline()
@@ -26,10 +24,13 @@ for i in range(80):
 
 
     if z >=0:
-        write('   ')
+        if i == 0:
+            write(escape(line[w:y].strip()))
+            write('\t')
+            write('<catalog_entry>')
         write('<'+x.lower()+'>')
         write(escape(line[w:y].strip()))
-        write('</'+x.lower()+'>\n')
+        write('</'+x.lower()+'>')
     elif z < 0:
         pass
 
