@@ -19,7 +19,7 @@ for i in range(75):
         y = len(line)-2
         w = z+2
     else:
-        y = len(line)
+        y = len(line)-1
         w = z+1
 
 

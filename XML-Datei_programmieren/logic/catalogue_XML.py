@@ -58,7 +58,7 @@ for i in range(16):
           write('<software_ver>')
           startIndex = line.index('\"')+1
           endIndex = len(line)-2
-          write(line[startIndex:endIndex].strip())
+          write(line[startIndex:endIndex])
           write('</software_ver>')
           write('\n')
 
