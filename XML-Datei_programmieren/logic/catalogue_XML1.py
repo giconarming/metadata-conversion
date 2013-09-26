@@ -11,26 +11,23 @@ write('\n')
 
 for i in range(75):
     line = f.readline()
-    z = line.find('=')
-    v = line.find('"')
-    x = line[0:z]
+    gleich = line.find('=')
+    anführungs = line.find('"')
+    tag = line[0:gleich]
 
-    if v >=0:
-        y = len(line)-2
-        w = z+2
+    if anführungs >=0:
+        wertende = len(line)-2
+        wertanfang = gleich+2
     else:
-        y = len(line)-1
-        w = z+1
+        wertende = len(line)-1
+        wertanfang = gleich+1
 
 
-    if z >=0:
+    if gleich >=0:
         write('   ')
-        write('<'+x.lower()+'>')
-        write(escape(line[w:y].strip()))
-        write('</'+x.lower()+'>\n')
-    elif z < 0:
-        pass
-
+        write('<'+tag.lower()+'>')
+        write(escape(line[wertanfang:wertende].strip()))
+        write('</'+tag.lower()+'>\n')
 
 write('</catalog_entry>')
 f.close()
